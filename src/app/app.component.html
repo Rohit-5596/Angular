@@ -1,0 +1,28 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1 style="color:brown">
+    Welcome to {{ title }}!
+  </h1>
+  <h3>Interpolation</h3>
+  <h5>
+    First Name : {{firstName}}
+  </h5>
+  <h5>
+    Last Name : {{lastName}}
+  </h5>
+  <h5>
+    Full Name : {{getFullName()}}
+  </h5>
+  10+2+4*5-6 => {{10+2+4*5-6}}
+  <h3>Property Binding :</h3>
+  
+    First Name :<h5 [innerText]="firstName"></h5>
+    Last Name :<h5 [innerText]="lastName"></h5>
+    Full Name :<h5 [innerText]="getFullName()"></h5>
+    <h3>Event Binding :</h3> 
+    <button (click)="getCount()">Count</button>
+    <h4>Button Clicked {{count}} times.</h4>
+    Address : <input tyoe="text" [(ngModel)]="address">
+    {{address}}
+</div>
+<router-outlet></router-outlet>
